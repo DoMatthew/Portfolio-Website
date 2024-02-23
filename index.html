@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container"></div>
+        <nav>   
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Engineer</p>
+            <h1>Hi, I'm <span>Matthew Do </span><br> From California</h1>
+        </div>
+    </div>
+</div>
+<!------------about--------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="">
+            </div>
+            <div class="about-col-2">
+                <h1>About Me</h1>
+                <p>I am a first year computer engineer major at UC Santa Cruz.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Skills</span><br>Languages</li>
+                        <li><span>Skills</span><br>Languages</li>
+                        <li><span>Skills</span><br>Languages</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Experience</span><br>Projects</li>
+                        <li><span>Experience </span><br>Projects</li>
+                        <li><span>Experience </span><br>Projects</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Education</span><br>Classes</li>
+                        <li><span> Education</span><br>Classes</li>
+                        <li><span>Education</span><br>Classes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------services------------------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Computer Science</h2>
+                    <p>TBD</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Computer Engineering</h2>
+                    <p>TBD</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Computer Science</h2>
+                    <p>TBD</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-----------portfolio------------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="" alt="">
+            </div>
+            <div class="work">
+                <img src="" alt="">
+            </div>
+            <div class="work">
+                <img src="" alt="">
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class=""sub-title>Contact Me</h1>
+                <p> <i class="fa-regular fa-paper-plane-top"></i> matthewdo2005@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/matthew.do1/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+</html>
